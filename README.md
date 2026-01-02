@@ -1,4 +1,4 @@
-# infraopsfleet — opsfleettech EKS + Karpenter Infrastructure
+# Opsfleet EKS + Karpenter Infrastructure
 
 Production-grade Terraform infrastructure for deploying an Amazon EKS cluster with Karpenter autoscaling, supporting both AMD64 and ARM64 (Graviton) worker nodes.
 
