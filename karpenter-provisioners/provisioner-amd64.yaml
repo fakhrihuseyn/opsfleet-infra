@@ -1,0 +1,20 @@
+apiVersion: karpenter.sh/v1alpha5
+kind: Provisioner
+metadata:
+  name: provisioner-amd64
+spec:
+  requirements:
+    - key: kubernetes.io/arch
+      operator: In
+      values: [amd64]
+  provider:
+    subnetSelector:
+      kubernetes.io/cluster/reprovision-dev: "owned"
+    securityGroupSelector:
+      kubernetes.io/cluster/reprovision-dev: "owned"
+  limits:
+    resources:
+      cpu: "2000"
+  weight: 1
+  consolidation:
+    enabled: true
