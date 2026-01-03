@@ -24,8 +24,8 @@ crash.log
 crash.*.log
 
 # Environment variables
-.env
-.env.*
+# .env
+# .env.*
 
 # IDE and editor files
 .vscode/
@@ -55,3 +55,7 @@ kubeconfig*
 # Temporary files
 *.tmp
 *.temp
+
+# Allow tracking the env directory and its contents (re-include tfvars there)
+!env/
+!env/**
